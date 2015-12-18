@@ -1,12 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# This application is released under the GNU General Public License 
-# v3 (or, at your option, any later version). You can find the full 
-# text of the license under http://www.gnu.org/licenses/gpl.txt. 
-# By using, editing and/or distributing this software you agree to 
-# the terms and conditions of this license. 
-# Thank you for using free software!
+# LyricsScreenlet Copyright (C) 2009 by Marcel Dancak <dancakm@gmail.com>
+
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 
 import logging
 log = logging.getLogger("LyricsScreenlet")
@@ -59,7 +68,7 @@ class Theme:
 
 	def get_image_dimensions(self, name):
 		if self.svgs.has_key(name):
-			return self.svgs[name].get_dimension_data()
+			return None
 		elif self.pngs.has_key(name):
 			png = self.pngs[name]
 			return [png.get_width(), png.get_height()]
